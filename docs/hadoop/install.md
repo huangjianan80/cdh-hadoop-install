@@ -45,8 +45,7 @@
    pscp.pssh  -h dn.host hadoop/conf/RackAware.py /tmp/  
    pssh -i -h dn.host "mv /tmp/*.xml /etc/hadoop/conf/"  
    pssh -i -h dn.host mv /tmp/RackAware.py /etc/hadoop/conf/  
-   pssh -i -h dn.host "/etc/init.d/hadoop-hdfs-datanode start"  
-
+ 
    #rm
    pssh -i -h dn.host "mkdir -p /data1/yarn/local;mkdir -p /data1/yarn/logs;chown -R     yarn:hadoop /data1/yarn;chmod -R 755 /data1/yarn "  
    pssh -i -h all.host "mkdir /tmp/conf"  
